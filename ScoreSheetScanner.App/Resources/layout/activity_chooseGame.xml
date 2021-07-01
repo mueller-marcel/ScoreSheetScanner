@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:progressTint="@color/accent_material_light"
+            android:id="@+id/progressBarChooser"
+            android:layout_below="@id/button_search"
+            android:visibility="invisible"
+        />
+
+        <TextView
+            android:id="@+id/label_numberOfHomeTeam"
+            android:text="@string/numberOfHomeTeam"
+            android:textSize="38px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        />
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/textEdit_numberOFHomeTeam"
+            android:layout_below="@id/label_numberOfHomeTeam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+        />
+
+        <TextView
+            android:id="@+id/label_dateFrom"
+            android:text="@string/dateFrom"
+            android:layout_below="@id/textEdit_numberOFHomeTeam"
+            android:textSize="38px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        />
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/textEdit_dateFrom"
+            android:layout_below="@id/label_dateFrom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:singleLine="true"
+        />
+
+        <Button
+            android:text="@string/chooseDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textEdit_dateFrom"
+            android:id="@+id/button_choose_date_from"
+            android:layout_gravity="center_vertical"
+        />
+
+         <TextView
+            android:id="@+id/label_dateTo"
+            android:text="@string/dateTo"
+            android:layout_below="@id/button_choose_date_from"
+            android:textSize="38px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        />
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/textEdit_dateTo"
+            android:layout_below="@id/label_dateTo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:editable="false"
+            android:singleLine="true"
+        />
+
+         <Button
+            android:text="@string/chooseDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textEdit_dateTo"
+            android:id="@+id/button_choose_date_to"
+            android:layout_gravity="center_vertical"
+        />
+
+        <Button
+            android:text="@string/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_choose_date_to"
+            android:id="@+id/button_search"
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="@color/accent_material_light"
+            android:textColor="@android:color/white"/>
+        />
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_below="@id/button_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        
+
+</RelativeLayout>

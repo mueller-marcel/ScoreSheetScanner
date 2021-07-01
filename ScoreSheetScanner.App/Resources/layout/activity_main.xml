@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+    <Button
+        android:text="@string/title_takePicture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnPickFromGallery"
+        android:id="@+id/btnTakePicture"
+        android:layout_gravity="center_vertical" />
+    <Button
+        android:text="@string/title_pickFromGallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnPickFromGallery"
+        android:layout_alignParentBottom="true"/>
+    <Button
+        android:text="@string/btn_to_choose_game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnTakePicture"
+        android:id="@+id/btnToShowData"
+        android:layout_gravity="center_vertical"
+        android:enabled="false"
+        android:backgroundTint="@color/accent_material_light"
+        android:textColor="@color/highlighted_text_material_dark"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnToShowData">
+        <ImageView
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/imageViewShowScoreSheet"
+            android:visibility="invisible"
+            android:contentDescription="" />
+        <TextView
+            android:text="@string/title_welcome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/textViewWelcome"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:progressTint="@color/accent_material_light"
+            android:id="@+id/progressBar"
+            android:visibility="invisible"/>
+    </RelativeLayout>
+</RelativeLayout>
